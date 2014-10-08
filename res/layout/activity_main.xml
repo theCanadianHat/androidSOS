@@ -69,12 +69,22 @@
     
     <Button android:id="@+id/buttonID"
         android:layout_gravity="bottom"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:textSize="25.0sp"
         android:text="@string/buttonText" 
         android:textColor="#fff"
         android:onClick="addTicket"/>
+    
+    <Button
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="25.0sp"
+        android:text="@string/clearText" 
+        android:textColor="#fff"
+        android:onClick="clearDataBase"/>
 
 </LinearLayout>

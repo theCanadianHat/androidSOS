@@ -1249,6 +1249,7 @@ containing a value of this type.
         public static final int action_settings=0x7f0a000e;
         public static final int app_name=0x7f0a000d;
         public static final int buttonText=0x7f0a0016;
+        public static final int clearText=0x7f0a0018;
         public static final int netText=0x7f0a0017;
         public static final int spentText=0x7f0a000f;
         public static final int ticketValueEditText=0x7f0a0013;

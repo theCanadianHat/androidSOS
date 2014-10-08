@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.content.Context;
+import android.content.SharedPreferences;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -46,6 +48,7 @@ public class MainActivity extends ActionBarActivity {
     public void addTicket(View view){
     	EditText valueET = (EditText) findViewById(R.id.ticketValue);
     	EditText winET= (EditText) findViewById(R.id.ticketWin);
+    	
     	float value = 0,win = 0;
     	try{
     		value = Float.parseFloat(valueET.getText().toString());
@@ -55,10 +58,18 @@ public class MainActivity extends ActionBarActivity {
         	valueET.setText("");
         	return;
     	}
+    	
+    	//update locals from database
+    	SharedPreferences sharedPrefs = getPreferences(Context.MODE_PRIVATE);
+    	_moneySpent = sharedPrefs.getFloat(getString(R.string.spentText), 0);
     	_moneySpent += value;
+    	_moneyWon = sharedPrefs.getFloat(getString(R.string.wonText), 0);
     	_moneyWon += win;
+    	_ticketsBought = sharedPrefs.getInt(getString(R.string.ticketsText), 0);
     	_ticketsBought++;
-    	_net = _moneyWon - _moneySpent;
+    	_net = sharedPrefs.getFloat(getString(R.string.netText), 0);
+    	_net += win - value;
+    	
     	TextView spent = (TextView) findViewById(R.id.spentID);
     	spent.setText("Money Spent: "+String.format("%.2f", _moneySpent));
     	TextView won = (TextView) findViewById(R.id.wonID);
@@ -74,5 +85,27 @@ public class MainActivity extends ActionBarActivity {
     	}
     	winET.setText("");
     	valueET.setText("");
+    	
+    	//update database
+    	SharedPreferences.Editor editor = sharedPrefs.edit();
+    	editor.putFloat(getString(R.string.spentText),_moneySpent);
+    	editor.putFloat(getString(R.string.wonText),_moneyWon);
+    	editor.putInt(getString(R.string.ticketsText),_ticketsBought);
+    	editor.putFloat(getString(R.string.netText),_net);
+    	editor.commit();
+    }
+    
+    public void clearDataBase(View view){
+    	SharedPreferences.Editor editor = getPreferences(Context.MODE_PRIVATE).edit();
+    	editor.clear();
+    	editor.commit();
+    	TextView spent = (TextView) findViewById(R.id.spentID);
+    	spent.setText("Money Spent: 0.00");
+    	TextView won = (TextView) findViewById(R.id.wonID);
+    	won.setText("Money Won: 0.00");
+    	TextView tickets = (TextView) findViewById(R.id.ticketsID);
+    	tickets.setText("Tickets Bought: 0");
+    	TextView net = (TextView) findViewById(R.id.netID);
+    	net.setText("Tickets Net: 0.00");
     }
 }
