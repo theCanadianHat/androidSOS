@@ -12,47 +12,60 @@
 
     <TextView android:id="@+id/spentID"
         android:layout_gravity="top"
+        android:layout_weight="1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:textSize="25.0sp"
         android:text="@string/spentText"
         android:textColor="#f00"/>
 
     <TextView android:id="@+id/wonID"
         android:layout_gravity="top"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:textSize="25.0sp"
         android:text="@string/wonText"
         android:textColor="#0f0"/>
     
     <TextView android:id="@+id/ticketsID"
         android:layout_gravity="top"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:textSize="25.0sp"
         android:text="@string/ticketsText"
         android:textColor="#fff"/>
     
+    
+    
    
     <EditText android:id="@+id/ticketValue"
         android:layout_gravity="bottom"
+        android:layout_weight="1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/ticketValueEditText"/>
+        android:layout_height="0dp"
+        android:textColor="#fff"
+        android:hint="@string/ticketValueEditText"
+        android:inputType="number"/>
     
 
     <EditText android:id="@+id/ticketWin"
         android:layout_gravity="bottom"
+        android:layout_weight="1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/ticketWinEditText"/>
+        android:layout_height="0dp"
+        android:textColor="#fff"
+        android:hint="@string/ticketWinEditText"
+        android:inputType="number"/>
     
     <Button android:id="@+id/buttonID"
         android:layout_gravity="bottom"
+        android:layout_weight="2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="@string/buttonText" 
-        android:textColor="#fff"/>
+        android:textColor="#fff"
+        android:onClick="addTicket"/>
 
 </LinearLayout>

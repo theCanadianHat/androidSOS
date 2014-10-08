@@ -4,9 +4,16 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
+	
+	private float moneySpent=0;
+	private float moneyWon=0;
+	private float ticketsBought=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,5 +39,23 @@ public class MainActivity extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    
+    public void addTicket(View view){
+    	EditText valueET = (EditText) findViewById(R.id.ticketValue);
+    	EditText winET= (EditText) findViewById(R.id.ticketWin);
+    	float value = Float.parseFloat(valueET.getText().toString());
+    	float win = Float.parseFloat(winET.getText().toString());
+    	moneySpent += value;
+    	moneyWon += win;
+    	ticketsBought++;
+    	TextView spent = (TextView) findViewById(R.id.spentID);
+    	spent.setText("Money Spent: "+moneySpent);
+    	TextView won = (TextView) findViewById(R.id.wonID);
+    	won.setText("Money Won: "+moneyWon);
+    	TextView tickets = (TextView) findViewById(R.id.ticketsID);
+    	tickets.setText("Tickets Bought: "+ticketsBought);
+    	winET.setText("");
+    	valueET.setText("");
     }
 }
