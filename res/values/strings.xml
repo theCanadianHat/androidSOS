@@ -2,11 +2,14 @@
 <resources>
 
     <string name="app_name">ScratchOffStats</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="spent">Money Spent:</string>
-    <string name="won">Money Won:</string>
-    <string name="tickets">Tickets Bought:</string>
+    <string name="spentText">Money Spent:</string>
+    <string name="wonText">Money Won:</string>
+    <string name="ticketsText">Tickets Bought:</string>
+    <string name="ticketValueText">Value of the Ticket:</string>
+    <string name="ticketValueEditText">Enter price of the ticket</string>
+    <string name="ticketWinText">Ticket Winnings:</string>
+    <string name="ticketWinEditText">Enter how much you won</string>
     <string name="buttonText">Add a Ticket!</string>
 
 </resources>
