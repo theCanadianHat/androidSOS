@@ -12,5 +12,5 @@ Add button functionallity. Add Net. Fix no input bug. Tweak layout and Font Size
 ##ToDo before Publish
 Make Icon  
 ~~Make a Database~~  
-Figure out divider 
+Figure out divider  
 Make About page 
