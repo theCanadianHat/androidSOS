@@ -1,6 +1,7 @@
 package njh.androidApp.scratchoffstats;
 
 import android.support.v7.app.ActionBarActivity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,9 +12,10 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 	
-	private float moneySpent=0;
-	private float moneyWon=0;
-	private float ticketsBought=0;
+	private float _moneySpent=0;
+	private float _moneyWon=0;
+	private int   _ticketsBought=0;
+	private float _net=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,17 +46,32 @@ public class MainActivity extends ActionBarActivity {
     public void addTicket(View view){
     	EditText valueET = (EditText) findViewById(R.id.ticketValue);
     	EditText winET= (EditText) findViewById(R.id.ticketWin);
-    	float value = Float.parseFloat(valueET.getText().toString());
-    	float win = Float.parseFloat(winET.getText().toString());
-    	moneySpent += value;
-    	moneyWon += win;
-    	ticketsBought++;
+    	float value = 0,win = 0;
+    	try{
+    		value = Float.parseFloat(valueET.getText().toString());
+    		win = Float.parseFloat(winET.getText().toString());
+    	}catch(Exception e){
+    		winET.setText("");
+        	valueET.setText("");
+        	return;
+    	}
+    	_moneySpent += value;
+    	_moneyWon += win;
+    	_ticketsBought++;
+    	_net = _moneyWon - _moneySpent;
     	TextView spent = (TextView) findViewById(R.id.spentID);
-    	spent.setText("Money Spent: "+moneySpent);
+    	spent.setText("Money Spent: "+String.format("%.2f", _moneySpent));
     	TextView won = (TextView) findViewById(R.id.wonID);
-    	won.setText("Money Won: "+moneyWon);
+    	won.setText("Money Won: "+String.format("%.2f", _moneyWon));
     	TextView tickets = (TextView) findViewById(R.id.ticketsID);
-    	tickets.setText("Tickets Bought: "+ticketsBought);
+    	tickets.setText("Tickets Bought: "+_ticketsBought);
+    	TextView net = (TextView) findViewById(R.id.netID);
+    	net.setText("Tickets Net: "+String.format("%.2f", _net));
+    	if(_net > 0){
+    		net.setTextColor(Color.GREEN);
+    	}else{
+    		net.setTextColor(Color.RED);
+    	}
     	winET.setText("");
     	valueET.setText("");
     }

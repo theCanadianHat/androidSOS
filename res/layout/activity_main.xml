@@ -37,7 +37,13 @@
         android:text="@string/ticketsText"
         android:textColor="#fff"/>
     
-    
+    <TextView android:id="@+id/netID"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="25.0sp"
+        android:text="@string/netText"
+        android:textColor="#fff"/>
     
    
     <EditText android:id="@+id/ticketValue"
@@ -45,6 +51,7 @@
         android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:textSize="25.0sp"
         android:textColor="#fff"
         android:hint="@string/ticketValueEditText"
         android:inputType="number"/>
@@ -55,6 +62,7 @@
         android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:textSize="25.0sp"
         android:textColor="#fff"
         android:hint="@string/ticketWinEditText"
         android:inputType="number"/>
@@ -64,6 +72,7 @@
         android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:textSize="25.0sp"
         android:text="@string/buttonText" 
         android:textColor="#fff"
         android:onClick="addTicket"/>

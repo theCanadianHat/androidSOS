@@ -11,5 +11,6 @@
     <string name="ticketWinText">Ticket Winnings:</string>
     <string name="ticketWinEditText">Enter how much you won</string>
     <string name="buttonText">Add a Ticket!</string>
+    <string name="netText">Tickets Net:</string>
 
 </resources>
