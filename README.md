@@ -10,6 +10,6 @@ Create project and add the main activity. Fiddled with colors.
 Add button functionallity. Add Net. Fix no input bug. Tweak layout and Font Size.
 
 ##ToDo before Publish
-Make Iconi  
+Make Icon  
 Make a Database  
 Figure out divider  
