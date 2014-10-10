@@ -10,7 +10,8 @@ Create project and add the main activity. Fiddled with colors.
 Add button functionallity. Add Net. Fix no input bug. Tweak layout and Font Size.
 
 ##0.3
-Add database. Add clear button to clear the database.
+Add database. Add clear button to clear the database. Fix inital update bug.
+Start process of hiding clear button. Add about placeholder.
 
 ##ToDo before Publish
 Make Icon  

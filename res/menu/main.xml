@@ -1,12 +1,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="njh.androidApp.scratchoffstats.MainActivity" >
-
+    tools:context="njh.androidApp.scratchoffstats.MainActivity"
+	xmlns:sos="http://schemas.android.com/apk/auto-res">
     <item
         android:id="@+id/action_settings"
         android:title="@string/action_settings"
-        app:showAsAction="never"
-      	/>
+        sos:showAsAction="never"/>
+    <item
+        android:id="@+id/action_clear"
+        android:title="@string/clearText"
+        sos:showAsAction="never"/>
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/aboutText"
+        sos:showAsAction="never"/>
+    
 
 </menu>

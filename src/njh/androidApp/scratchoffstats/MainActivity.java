@@ -23,6 +23,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        updateTextViews();
     }
 
 
@@ -41,6 +42,10 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;
+        }else if(id == R.id.action_clear){
+        	
+        }else if(id == R.id.action_about){
+        	
         }
         return super.onOptionsItemSelected(item);
     }
@@ -69,23 +74,6 @@ public class MainActivity extends ActionBarActivity {
     	_ticketsBought++;
     	_net = sharedPrefs.getFloat(getString(R.string.netText), 0);
     	_net += win - value;
-    	
-    	TextView spent = (TextView) findViewById(R.id.spentID);
-    	spent.setText("Money Spent: "+String.format("%.2f", _moneySpent));
-    	TextView won = (TextView) findViewById(R.id.wonID);
-    	won.setText("Money Won: "+String.format("%.2f", _moneyWon));
-    	TextView tickets = (TextView) findViewById(R.id.ticketsID);
-    	tickets.setText("Tickets Bought: "+_ticketsBought);
-    	TextView net = (TextView) findViewById(R.id.netID);
-    	net.setText("Tickets Net: "+String.format("%.2f", _net));
-    	if(_net > 0){
-    		net.setTextColor(Color.GREEN);
-    	}else{
-    		net.setTextColor(Color.RED);
-    	}
-    	winET.setText("");
-    	valueET.setText("");
-    	
     	//update database
     	SharedPreferences.Editor editor = sharedPrefs.edit();
     	editor.putFloat(getString(R.string.spentText),_moneySpent);
@@ -93,19 +81,36 @@ public class MainActivity extends ActionBarActivity {
     	editor.putInt(getString(R.string.ticketsText),_ticketsBought);
     	editor.putFloat(getString(R.string.netText),_net);
     	editor.commit();
+    	
+    	updateTextViews();
+
+    	winET.setText("");
+    	valueET.setText("");
+    	
+    	
     }
     
     public void clearDataBase(View view){
     	SharedPreferences.Editor editor = getPreferences(Context.MODE_PRIVATE).edit();
     	editor.clear();
     	editor.commit();
+    	updateTextViews();
+    }
+    
+    private void updateTextViews(){
+    	SharedPreferences sharedPrefs = getPreferences(Context.MODE_PRIVATE);
     	TextView spent = (TextView) findViewById(R.id.spentID);
-    	spent.setText("Money Spent: 0.00");
+    	spent.setText("Money Spent: "+String.format("%.2f", sharedPrefs.getFloat(getString(R.string.spentText), 0)));
     	TextView won = (TextView) findViewById(R.id.wonID);
-    	won.setText("Money Won: 0.00");
+    	won.setText("Money Won: "+String.format("%.2f", sharedPrefs.getFloat(getString(R.string.wonText), 0)));
     	TextView tickets = (TextView) findViewById(R.id.ticketsID);
-    	tickets.setText("Tickets Bought: 0");
+    	tickets.setText("Tickets Bought: "+sharedPrefs.getInt(getString(R.string.ticketsText), 0));
     	TextView net = (TextView) findViewById(R.id.netID);
-    	net.setText("Tickets Net: 0.00");
+    	net.setText("Tickets Net: "+String.format("%.2f", sharedPrefs.getFloat(getString(R.string.wonText), 0)));
+    	if(sharedPrefs.getFloat(getString(R.string.wonText), 0) > 0.0f){
+    		net.setTextColor(Color.GREEN);
+    	}else{
+    		net.setTextColor(Color.RED);
+    	}
     }
 }
