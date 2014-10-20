@@ -4,10 +4,6 @@
     tools:context="njh.androidApp.scratchoffstats.MainActivity"
 	xmlns:sos="http://schemas.android.com/apk/auto-res">
     <item
-        android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        sos:showAsAction="never"/>
-    <item
         android:id="@+id/action_clear"
         android:title="@string/clearText"
         sos:showAsAction="never"/>

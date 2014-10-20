@@ -8,7 +8,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 
 
@@ -43,9 +46,12 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }else if(id == R.id.action_clear){
-        	
+        	buildAlertDialog();
+        	return true;
         }else if(id == R.id.action_about){
-        	
+        	Intent intent = new Intent(this,AboutActivity.class);
+        	startActivity(intent);
+        	return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -90,7 +96,7 @@ public class MainActivity extends ActionBarActivity {
     	
     }
     
-    public void clearDataBase(View view){
+    public void clearDataBase(){
     	SharedPreferences.Editor editor = getPreferences(Context.MODE_PRIVATE).edit();
     	editor.clear();
     	editor.commit();
@@ -106,11 +112,27 @@ public class MainActivity extends ActionBarActivity {
     	TextView tickets = (TextView) findViewById(R.id.ticketsID);
     	tickets.setText("Tickets Bought: "+sharedPrefs.getInt(getString(R.string.ticketsText), 0));
     	TextView net = (TextView) findViewById(R.id.netID);
-    	net.setText("Tickets Net: "+String.format("%.2f", sharedPrefs.getFloat(getString(R.string.wonText), 0)));
-    	if(sharedPrefs.getFloat(getString(R.string.wonText), 0) > 0.0f){
+    	net.setText("Tickets Net: "+String.format("%.2f", sharedPrefs.getFloat(getString(R.string.netText), 0)));
+    	if(sharedPrefs.getFloat(getString(R.string.netText), 0) > 0.0f){
     		net.setTextColor(Color.GREEN);
     	}else{
     		net.setTextColor(Color.RED);
     	}
+    }
+    
+    private void buildAlertDialog(){
+    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    	builder.setMessage(R.string.dialog_content).setTitle(R.string.dialog_title);
+    	builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener(){
+    		public void onClick(DialogInterface dialog,int id){
+    			clearDataBase();
+    		}
+    	});
+    	builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener(){
+    		public void onClick(DialogInterface dialog, int id){
+    		}
+    	});
+    	builder.create();
+    	builder.show();
     }
 }

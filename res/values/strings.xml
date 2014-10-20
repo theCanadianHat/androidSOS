@@ -14,6 +14,12 @@
     <string name="netText">Tickets Net:</string>
     <string name="clearText">Clear Data</string>
     <string name="aboutText">About</string>
-    <string name="title_activity_about">AboutActivity</string>
-
+    <string name="aboutContent">This is where I\'ll write about the app</string>
+    <string name="title_activity_about">About this App</string>
+    <string name="dialog_title">Whoa! You Sure?</string>
+    <string name="dialog_content">Are you sure you want to clear your Scratch Off Stats Data? This cannot be undone.</string>
+	<string name="ok">Yes</string>
+	<string name="cancel">No</string>
+    
+    
 </resources>

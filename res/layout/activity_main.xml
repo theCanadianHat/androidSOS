@@ -45,6 +45,10 @@
         android:text="@string/netText"
         android:textColor="#fff"/>
     
+    <View 
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#999"/>    
    
     <EditText android:id="@+id/ticketValue"
         android:layout_gravity="bottom"

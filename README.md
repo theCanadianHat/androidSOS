@@ -16,5 +16,5 @@ Start process of hiding clear button. Add about placeholder.
 ##ToDo before Publish
 ~~Make Icon~~  
 ~~Make a Database~~  
-Figure out divider  
-Make About page 
+~~Figure out divider~~  
+Make About page (just need to write the content for the page) 
