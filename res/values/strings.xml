@@ -15,6 +15,5 @@
     <string name="clearText">Clear Data</string>
     <string name="aboutText">About</string>
     <string name="title_activity_about">AboutActivity</string>
-    <string name="hello_world">Hello world!</string>
 
 </resources>

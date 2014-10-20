@@ -1078,6 +1078,10 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static final int ic_launcher=0x7f020057;
+        public static final int scratch_off_icon_hdpi=0x7f020058;
+        public static final int scratch_off_icon_mdpi=0x7f020059;
+        public static final int scratch_off_icon_xhdpi=0x7f02005a;
+        public static final int scratch_off_icon_xxhdpi=0x7f02005b;
     }
     public static final class id {
         public static final int action_about=0x7f050045;
@@ -1255,7 +1259,6 @@ containing a value of this type.
         public static final int app_name=0x7f0a000d;
         public static final int buttonText=0x7f0a0016;
         public static final int clearText=0x7f0a0018;
-        public static final int hello_world=0x7f0a001b;
         public static final int netText=0x7f0a0017;
         public static final int spentText=0x7f0a000f;
         public static final int ticketValueEditText=0x7f0a0013;
