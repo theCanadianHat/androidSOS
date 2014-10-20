@@ -14,7 +14,7 @@ Add database. Add clear button to clear the database. Fix inital update bug.
 Start process of hiding clear button. Add about placeholder.
 
 ##ToDo before Publish
-Make Icon  
+~~Make Icon~~  
 ~~Make a Database~~  
 Figure out divider  
 Make About page 
