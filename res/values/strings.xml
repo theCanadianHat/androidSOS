@@ -21,5 +21,17 @@
 	<string name="ok">Yes</string>
 	<string name="cancel">No</string>
     
+	<string name="oneDollarTickets">oneDollarTickets</string>
+	<string name="oneDollarWinnings">oneDollarWinnings</string>
+	<string name="twoDollarTickets">twoDollarTickets</string>
+	<string name="twoDollarWinnings">twoDollarWinnings</string>
+	<string name="threeDollarTickets">threeDollarTickets</string>
+	<string name="threeDollarWinnings">threeDollarWinnings</string>
+	<string name="fiveDollarTickets">fiveDollarTickets</string>
+	<string name="fiveDollarWinnings">fiveDollarWinnings</string>
+	<string name="tenDollarTickets">tenDollarTickets</string>
+	<string name="tenDollarWinnings">tenDollarWinnings</string>
+	<string name="twentyDollarTickets">twentyDollarTickets</string>
+	<string name="twentyDollarWinnings">twentyDollarWinnings</string>
     
 </resources>

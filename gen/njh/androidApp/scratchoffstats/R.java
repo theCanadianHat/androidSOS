@@ -1263,15 +1263,27 @@ containing a value of this type.
         public static final int clearText=0x7f0a0018;
         public static final int dialog_content=0x7f0a001d;
         public static final int dialog_title=0x7f0a001c;
+        public static final int fiveDollarTickets=0x7f0a0026;
+        public static final int fiveDollarWinnings=0x7f0a0027;
         public static final int netText=0x7f0a0017;
         public static final int ok=0x7f0a001e;
+        public static final int oneDollarTickets=0x7f0a0020;
+        public static final int oneDollarWinnings=0x7f0a0021;
         public static final int spentText=0x7f0a000f;
+        public static final int tenDollarTickets=0x7f0a0028;
+        public static final int tenDollarWinnings=0x7f0a0029;
+        public static final int threeDollarTickets=0x7f0a0024;
+        public static final int threeDollarWinnings=0x7f0a0025;
         public static final int ticketValueEditText=0x7f0a0013;
         public static final int ticketValueText=0x7f0a0012;
         public static final int ticketWinEditText=0x7f0a0015;
         public static final int ticketWinText=0x7f0a0014;
         public static final int ticketsText=0x7f0a0011;
         public static final int title_activity_about=0x7f0a001b;
+        public static final int twentyDollarTickets=0x7f0a002a;
+        public static final int twentyDollarWinnings=0x7f0a002b;
+        public static final int twoDollarTickets=0x7f0a0022;
+        public static final int twoDollarWinnings=0x7f0a0023;
         public static final int wonText=0x7f0a0010;
     }
     public static final class style {
