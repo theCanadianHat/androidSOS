@@ -18,20 +18,21 @@
     <string name="title_activity_about">About this App</string>
     <string name="dialog_title">Whoa! You Sure?</string>
     <string name="dialog_content">Are you sure you want to clear your Scratch Off Stats Data? This cannot be undone.</string>
-	<string name="ok">Yes</string>
-	<string name="cancel">No</string>
-    
-	<string name="oneDollarTickets">oneDollarTickets</string>
-	<string name="oneDollarWinnings">oneDollarWinnings</string>
-	<string name="twoDollarTickets">twoDollarTickets</string>
-	<string name="twoDollarWinnings">twoDollarWinnings</string>
-	<string name="threeDollarTickets">threeDollarTickets</string>
-	<string name="threeDollarWinnings">threeDollarWinnings</string>
-	<string name="fiveDollarTickets">fiveDollarTickets</string>
-	<string name="fiveDollarWinnings">fiveDollarWinnings</string>
-	<string name="tenDollarTickets">tenDollarTickets</string>
-	<string name="tenDollarWinnings">tenDollarWinnings</string>
-	<string name="twentyDollarTickets">twentyDollarTickets</string>
-	<string name="twentyDollarWinnings">twentyDollarWinnings</string>
-    
+    <string name="ok">Yes</string>
+    <string name="cancel">No</string>
+    <string name="oneDollarTickets">oneDollarTickets</string>
+    <string name="oneDollarWinnings">oneDollarWinnings</string>
+    <string name="twoDollarTickets">twoDollarTickets</string>
+    <string name="twoDollarWinnings">twoDollarWinnings</string>
+    <string name="threeDollarTickets">threeDollarTickets</string>
+    <string name="threeDollarWinnings">threeDollarWinnings</string>
+    <string name="fiveDollarTickets">fiveDollarTickets</string>
+    <string name="fiveDollarWinnings">fiveDollarWinnings</string>
+    <string name="tenDollarTickets">tenDollarTickets</string>
+    <string name="tenDollarWinnings">tenDollarWinnings</string>
+    <string name="twentyDollarTickets">twentyDollarTickets</string>
+    <string name="twentyDollarWinnings">twentyDollarWinnings</string>
+    <string name="title_activity_stat_table">Tickets Stat Table</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

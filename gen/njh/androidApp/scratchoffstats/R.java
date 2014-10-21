@@ -1207,11 +1207,13 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_about=0x7f030018;
         public static final int activity_main=0x7f030019;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
+        public static final int activity_stat_table=0x7f03001a;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
     }
     public static final class menu {
         public static final int about=0x7f0c0000;
         public static final int main=0x7f0c0001;
+        public static final int stat_table=0x7f0c0002;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1265,6 +1267,7 @@ containing a value of this type.
         public static final int dialog_title=0x7f0a001c;
         public static final int fiveDollarTickets=0x7f0a0026;
         public static final int fiveDollarWinnings=0x7f0a0027;
+        public static final int hello_world=0x7f0a002d;
         public static final int netText=0x7f0a0017;
         public static final int ok=0x7f0a001e;
         public static final int oneDollarTickets=0x7f0a0020;
@@ -1280,6 +1283,7 @@ containing a value of this type.
         public static final int ticketWinText=0x7f0a0014;
         public static final int ticketsText=0x7f0a0011;
         public static final int title_activity_about=0x7f0a001b;
+        public static final int title_activity_stat_table=0x7f0a002c;
         public static final int twentyDollarTickets=0x7f0a002a;
         public static final int twentyDollarWinnings=0x7f0a002b;
         public static final int twoDollarTickets=0x7f0a0022;

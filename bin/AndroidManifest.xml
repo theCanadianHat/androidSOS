@@ -26,6 +26,10 @@
             android:name=".AboutActivity"
             android:label="@string/title_activity_about" >
         </activity>
+        <activity
+            android:name=".StatTableActivity"
+            android:label="@string/title_activity_stat_table" >
+        </activity>
     </application>
 
 </manifest>
