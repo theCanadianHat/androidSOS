@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class AboutActivity extends ActionBarActivity {
 
@@ -11,6 +12,16 @@ public class AboutActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_about);
+		String text = "Scratch Off Stats v. 0.3\n\n";
+		text += "I am making this app so that people can track their sctrach off lottery tickets.";
+		text += " The first page shows your overall money spent and won along with your net winnings.";
+		text += " To add a ticket, fill out the price and winnings boxes and select \"Add a ticket\".";
+		text += " For this app to work as intended; you must add ALL tickets, not just winners.\n\n";
+		text += "***If you clear your stats there is now way to get them back!***\n\n";
+		text += "Thanks for Downloading my App!\n";
+		text += "Developed by Noah Herron\n";
+		TextView tv = (TextView) findViewById(R.id.aboutTextView);
+		tv.setText(text);
 	}
 
 	@Override
